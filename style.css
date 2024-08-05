@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --VeryDarkGray: hsl(0, 0%, 17%);
+    --DarkGray: hsl(0, 0%, 59%);
+    --Fontsizetextinput: 18px;
+}
+body{
+    font-family:'Times New Roman', Times, serif;
+    background-color: var(--DarkGrayishBlue);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.head{
+    position: relative;
+    background: url(./img/pattern-bg-desktop.png);
+    background-size: cover;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.title{
+    margin-top: 2em;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.search{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.search-text{
+    padding: 12px 10px;
+    padding-right: 0px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: none;
+    width: 300px;
+    font-size: 16px;
+}
+.search-btn{
+    padding:11.5px 10px;
+    background-color: black;
+    color: #fff;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: none;
+    font-size: var(--Fontsizetextinput);
+    width: 40px;
+}
+.search-details{
+    position: absolute;
+    z-index: 100;
+    bottom: 0px;
+    transform: translateY(50%);
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    width: 600px;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-right: 1px solid black;
+}
+.box:last-child{
+    border-right: none;
+}
+.light{
+    color: var(--DarkGray);
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 14px;
+}
+.bold{
+    font-weight: bold;
+    font-size: var(--Fontsizetextinput);
+}
+.map{
+    position: relative;
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid black;
+}
+.map .arrow{
+    background: url(./img/icon-location.svg) no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+@media (max-width:700px){
+    .head{
+        height: 35vh;
+        gap: 15px;
+    }
+    .title{
+        margin-top: 1em;
+    }
+    .search-details{
+        grid-template-columns: 1fr;
+        place-items: center;
+        gap: 15px;
+        padding: 20px;
+        width: 340px;
+    }
+    .box{
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+        border-right: none;
+    }
+    .map{
+        height: 65vh;
+    }
+}
