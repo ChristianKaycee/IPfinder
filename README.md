@@ -3,7 +3,7 @@ Simple program to get the location and time zone of a specific IP address
 
 # Practice project
 ---
-<a href="https://multi-step-form-alpha-lovat.vercel.app">Live Site Link</a>
+<a href="https://christiankaycee.github.io/IPfinder">Live Site Link</a>
 
       -- Made with 💌
          -- By KingShow
